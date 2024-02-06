@@ -1,1 +1,4 @@
- This is a HTML+CSS based frontend using ReactJS
+ This is a PROJECT which uses 
+ ReactJS(for frontend)
+ SpringBoot(for backend)
+ MySQL(database)
