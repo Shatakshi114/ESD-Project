@@ -1,0 +1,79 @@
+INSERT INTO course_schedule (course_time, course_day, room, building) VALUES
+('09:30:00', 'Monday', 'R103', 'Ramanujan'),
+('11:15:00', 'Monday', 'R103', 'Ramanujan'),
+('16:00:00', 'Monday', 'R105', 'Ramanujan'),
+('09:30:00', 'Tuesday', 'R203', 'Ramanujan'),
+('11:15:00', 'Tuesday', 'R203', 'Ramanujan'),
+('09:30:00', 'Wednesday', 'R103', 'Ramanujan'),
+('11:15:00', 'Wednesday', 'R103', 'Ramanujan'),
+('14:00:00', 'Wednesday', 'R103', 'Ramanujan'),
+('09:30:00', 'Thursday', 'R103', 'Ramanujan'),
+('11:15:00', 'Thursday', 'R103', 'Ramanujan'),
+('14:00:00', 'Thursday', 'R103', 'Ramanujan'),
+('09:30:00', 'Friday', 'R103', 'Ramanujan'),
+('09:30:00', 'Saturday', 'R103', 'Ramanujan'),
+('09:30:00', 'Monday', 'R203', 'Ramanujan');
+
+INSERT INTO department (dept_name, Capacity) VALUES
+('Admission', 50),
+('Faculty', 100),
+('Placement', 10);
+
+INSERT INTO courses (course_code, course_name, course_description, course_year, course_credits, course_term, course_capacity)
+VALUES
+    ('CS-511', 'Algorithms', NULL, 2022, 4, 1, 150),
+    ('CS-512', 'Concrete Mathematics', NULL, 2022, 4, 1, 150),
+    ('CS-513', 'Software Systems', NULL, 2022, 4, 1, 150),
+    ('AI-511', 'Machine Learning', NULL, 2022, 4, 1, 150),
+    ('AI-512', 'Mathematics for machine learning', NULL, 2022, 4, 1, 150);
+
+
+
+   CREATE TABLE `employees` (
+  `employee_id` int NOT NULL AUTO_INCREMENT,
+  `email` varchar(255) NOT NULL,
+  `first_name` varchar(255) NOT NULL,
+  `last_name` varchar(255) DEFAULT NULL,
+  `password` varchar(255) NOT NULL,
+  `photo_path` varchar(255) NOT NULL,
+  `title` varchar(255) DEFAULT NULL,
+  `dept_id` int DEFAULT NULL,
+  PRIMARY KEY (`employee_id`))
+  
+  CREATE TABLE `courses` (
+  `course_id` int NOT NULL AUTO_INCREMENT,
+  `course_capacity` int NOT NULL,
+  `course_code` varchar(255) NOT NULL,
+  `course_credits` int NOT NULL,
+  `course_description` varchar(255) DEFAULT NULL,
+  `course_name` varchar(255) NOT NULL,
+  `course_term` int NOT NULL,
+  `course_year` int NOT NULL)
+  
+   CREATE TABLE `course_schedule` (
+  `course_schedule_id` int NOT NULL AUTO_INCREMENT,
+  `building` varchar(255) DEFAULT NULL,
+  `course_day` varchar(255) NOT NULL,
+  `room` varchar(255) NOT NULL,
+  `course_time` varchar(255) NOT NULL)
+  
+  
+  CREATE TABLE `department` (
+  `dept_id` int NOT NULL AUTO_INCREMENT,
+  `capacity` int NOT NULL,
+  `dept_name` varchar(255) NOT NULL,
+  PRIMARY KEY (`dept_id`))
+  
+  
+UPDATE course_schedule SET course_id=1 Where course_schedule_id=1;
+UPDATE course_schedule SET course_id=2 Where course_schedule_id=14;
+UPDATE course_schedule SET course_id=1 Where course_schedule_id=2;
+UPDATE course_schedule SET course_id=2 Where course_schedule_id=3;
+UPDATE course_schedule SET course_id=3 Where course_schedule_id=4;
+UPDATE course_schedule SET course_id=4 Where course_schedule_id=5;
+UPDATE course_schedule SET course_id=1 Where course_schedule_id=6;
+UPDATE course_schedule SET course_id=2 Where course_schedule_id=7;
+UPDATE course_schedule SET course_id=2 Where course_schedule_id=8;
+UPDATE course_schedule SET course_id=3 Where course_schedule_id=9;
+UPDATE course_schedule SET course_id=4 Where course_schedule_id=10;
+
